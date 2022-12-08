@@ -13,7 +13,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     var height = size.height;
-    var width = size.width;
+
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
@@ -30,44 +30,107 @@ class _HomePageState extends State<HomePage> {
         children: [
           Column(
             children: [
+              Container(
+                height: height / 20,
+                decoration: BoxDecoration(
+                  color: Colors.transparent,
+                ),
+              ),
               animal("assets/images/inek.png", Colors.pink.shade300,
                   "audio/inek.mp3"),
+              Container(
+                height: height / 20,
+                decoration: BoxDecoration(
+                  color: Colors.transparent,
+                ),
+              ),
               animal("assets/images/aslan.png", Colors.orange.shade400,
                   "audio/aslan.mp3"),
               Container(
-                height: height / 2,
+                height: height / 20,
                 decoration: BoxDecoration(
                   color: Colors.transparent,
                 ),
               ),
               animal("assets/images/at.png", Colors.brown.shade700,
                   "audio/at.mp3"),
-              /* SizedBox(
-                  height: MediaQuery.of(context).size.height,
-                ), */
+              Container(
+                height: height / 20,
+                decoration: BoxDecoration(
+                  color: Colors.transparent,
+                ),
+              ),
               animal("assets/images/karga.png", Colors.grey, "audio/karga.mp3"),
             ],
           ),
           Column(
             children: [
+              Container(
+                height: height / 20,
+                decoration: BoxDecoration(
+                  color: Colors.transparent,
+                ),
+              ),
               animal("assets/images/ayi.png", Colors.brown.shade300,
                   "audio/ayi.mp3"),
+              Container(
+                height: height / 20,
+                decoration: BoxDecoration(
+                  color: Colors.transparent,
+                ),
+              ),
               animal("assets/images/kedi.png", Colors.red.shade400,
                   "audio/kedi.mp3"),
+              Container(
+                height: height / 20,
+                decoration: BoxDecoration(
+                  color: Colors.transparent,
+                ),
+              ),
               animal("assets/images/kopek.png", Colors.yellow.shade900,
                   "audio/kopek.mp3"),
+              Container(
+                height: height / 20,
+                decoration: BoxDecoration(
+                  color: Colors.transparent,
+                ),
+              ),
               animal("assets/images/koyun.png", Colors.purple.shade400,
                   "audio/koyun.mp3"),
             ],
           ),
           Column(
             children: [
+              Container(
+                height: height / 20,
+                decoration: BoxDecoration(
+                  color: Colors.transparent,
+                ),
+              ),
               animal("assets/images/kurbaga.png", Colors.green.shade800,
                   "audio/kurba.mp3"),
+              Container(
+                height: height / 20,
+                decoration: BoxDecoration(
+                  color: Colors.transparent,
+                ),
+              ),
               animal("assets/images/kurt.png", Colors.grey.shade400,
                   "audio/kurt.mp3"),
+              Container(
+                height: height / 20,
+                decoration: BoxDecoration(
+                  color: Colors.transparent,
+                ),
+              ),
               animal("assets/images/maymun.png", Colors.orange.shade400,
                   "audio/maymun.mp3"),
+              Container(
+                height: height / 20,
+                decoration: BoxDecoration(
+                  color: Colors.transparent,
+                ),
+              ),
               animal("assets/images/fil.png", Color.fromARGB(255, 19, 67, 107),
                   "audio/fil.mp3"),
             ],
@@ -85,9 +148,6 @@ class _HomePageState extends State<HomePage> {
       }),
       child: Container(
         height: 120,
-        margin: EdgeInsets.only(
-          top: 40,
-        ),
         decoration: BoxDecoration(
           color: bgcolor,
           borderRadius: BorderRadius.circular(20),
