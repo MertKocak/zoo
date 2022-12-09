@@ -1,5 +1,6 @@
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bounce/flutter_bounce.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({Key? key}) : super(key: key);
@@ -21,9 +22,9 @@ class _HomePageState extends State<HomePage> {
         title: Text(
           "ZOO",
           style:
-              TextStyle(fontSize: 50, color: Colors.white, fontFamily: "quick"),
+              TextStyle(fontSize: 40, color: Colors.white, fontFamily: "quick"),
         ),
-        backgroundColor: Color.fromARGB(255, 255, 63, 117),
+        backgroundColor: Color.fromARGB(255, 236, 74, 163),
         bottomOpacity: 0.0,
         elevation: 0.0,
       ),
@@ -54,8 +55,8 @@ class _HomePageState extends State<HomePage> {
                   color: Colors.transparent,
                 ),
               ),
-              animal("assets/images/ari.png", Colors.orange.shade300,
-                  "audio/at.mp3"),
+              animal("assets/images/yunus.png",
+                  Color.fromARGB(255, 255, 140, 140), "audio/yunus.mp3"),
               Container(
                 height: height / 40,
                 decoration: BoxDecoration(
@@ -75,7 +76,7 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
               animal("assets/images/kus.png",
-                  Color.fromARGB(255, 250, 188, 165), "audio/ayi.mp3"),
+                  Color.fromARGB(255, 250, 188, 165), "audio/kus.mp3"),
               Container(
                 height: height / 40,
                 decoration: BoxDecoration(
@@ -111,7 +112,7 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
               animal("assets/images/kurbaga.png",
-                  Color.fromARGB(255, 47, 189, 52), "audio/kurba.mp3"),
+                  Color.fromARGB(255, 47, 189, 52), "audio/kurbaga.mp3"),
               Container(
                 height: height / 40,
                 decoration: BoxDecoration(
@@ -119,7 +120,7 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
               animal("assets/images/ordek.png",
-                  Color.fromARGB(255, 2, 141, 255), "audio/kurt.mp3"),
+                  Color.fromARGB(255, 2, 141, 255), "audio/ordek.mp3"),
               Container(
                 height: height / 40,
                 decoration: BoxDecoration(
@@ -144,21 +145,24 @@ class _HomePageState extends State<HomePage> {
   }
 
   animal(String image, Color bgcolor, String audio) {
-    return InkWell(
-      borderRadius: BorderRadius.circular(20),
-      onTap: (() {
+    return Bounce(
+      onPressed: (() {
         final player = AudioCache();
         player.play(audio);
       }),
+      duration: Duration(milliseconds: 200),
       child: Container(
         height: 140,
         width: 120,
         decoration: BoxDecoration(
           color: bgcolor,
-          borderRadius: BorderRadius.circular(20),
+          borderRadius: BorderRadius.circular(28),
         ),
-        child: Image.asset(
-          image,
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Image.asset(
+            image,
+          ),
         ),
       ),
     );
