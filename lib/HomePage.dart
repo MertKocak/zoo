@@ -34,7 +34,7 @@ class _HomePageState extends State<HomePage> {
           Column(
             children: [
               Container(
-                height: height / 20,
+                height: height / 30,
                 decoration: BoxDecoration(
                   color: Colors.transparent,
                 ),
@@ -70,7 +70,7 @@ class _HomePageState extends State<HomePage> {
           Column(
             children: [
               Container(
-                height: height / 20,
+                height: height / 30,
                 decoration: BoxDecoration(
                   color: Colors.transparent,
                 ),
@@ -106,7 +106,7 @@ class _HomePageState extends State<HomePage> {
           Column(
             children: [
               Container(
-                height: height / 20,
+                height: height / 30,
                 decoration: BoxDecoration(
                   color: Colors.transparent,
                 ),
