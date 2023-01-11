@@ -24,7 +24,7 @@ class _HomePageState extends State<HomePage> {
           style:
               TextStyle(fontSize: 40, color: Colors.white, fontFamily: "quick"),
         ),
-        backgroundColor: Color.fromARGB(255, 236, 74, 163),
+        backgroundColor: Color.fromRGBO(236, 74, 163, 1),
         bottomOpacity: 0.0,
         elevation: 0.0,
       ),
