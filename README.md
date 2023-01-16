@@ -1,3 +1,3 @@
 Hayvan sesleri çıkaran flutter uygulaması. 
 
-![Adsız tasarım (15)](https://user-images.githubusercontent.com/74009802/212757517-1b027f75-56a3-456c-90a3-e586eb3592f3.png)
+![WhatsApp Image 2023-01-16 at 22 55 59](https://user-images.githubusercontent.com/74009802/212757626-9e4f5252-d929-4c02-b587-4ed4a7c108f6.jpeg)
