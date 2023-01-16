@@ -13,7 +13,7 @@ class HomeView extends StatefulWidget {
 
 class _HomeViewState extends State<HomeView> {
   final String _appTitle = "ZOO";
-  final double _childAspectRatio = 0.75;
+  final double _childAspectRatio = 0.72;
   final int _crossAxisCount = 3;
   final Color _backgrounColor = const Color.fromRGBO(236, 74, 163, 1);
   int _counter = 0;
@@ -35,6 +35,7 @@ class _HomeViewState extends State<HomeView> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         centerTitle: true,
+        elevation: 0,
         title: Text(
           _appTitle,
           style: HomeStyles().appTitleStyle,
@@ -47,7 +48,10 @@ class _HomeViewState extends State<HomeView> {
               crossAxisCount: _crossAxisCount,
               childAspectRatio: _childAspectRatio),
           itemCount: AppVariables.sounds.length,
-          padding: const EdgeInsets.all(5),
+          padding: const EdgeInsets.only(
+            left: 8,
+            right: 8,
+          ),
           itemBuilder: (BuildContext context, int index) {
             return Column(
               children: [
@@ -80,7 +84,8 @@ class _HomeViewState extends State<HomeView> {
           }),
           duration: const Duration(milliseconds: 200),
           child: Container(
-            height: height / 5.4,
+            margin: EdgeInsets.only(top: 12),
+            height: height / 5.6,
             width: width / 3.3,
             decoration: BoxDecoration(
                 color: bgcolor, borderRadius: BorderRadius.circular(28)),
@@ -172,8 +177,34 @@ class _HomeViewState extends State<HomeView> {
 }
 
 class AppVariables {
-  static List<String> images = ["inek","kus","kurbaga","aslan","kedi","ordek","yunus","kopek","maymun","karga","koyun","fil"];
-  static List<String> sounds = ["inek","kus","kurbaga","aslan","kedi","ordek","yunus","kopek","maymun","karga","koyun","fil"];
+  static List<String> images = [
+    "inek",
+    "kus",
+    "kurbaga",
+    "aslan",
+    "kedi",
+    "ordek",
+    "yunus",
+    "kopek",
+    "maymun",
+    "karga",
+    "koyun",
+    "fil"
+  ];
+  static List<String> sounds = [
+    "inek",
+    "kus",
+    "kurbaga",
+    "aslan",
+    "kedi",
+    "ordek",
+    "yunus",
+    "kopek",
+    "maymun",
+    "karga",
+    "koyun",
+    "fil"
+  ];
   static List<Color> containerColors = [
     Colors.pink.shade300,
     const Color.fromARGB(255, 250, 188, 165),
@@ -184,7 +215,7 @@ class AppVariables {
     const Color.fromARGB(255, 255, 140, 140),
     const Color.fromARGB(255, 231, 104, 0),
     Colors.orange,
-    const Color.fromARGB(255, 250, 188, 165),
+    Color.fromARGB(255, 53, 233, 131),
     const Color.fromARGB(255, 203, 17, 235),
     const Color.fromARGB(255, 21, 101, 192)
   ];
@@ -192,5 +223,5 @@ class AppVariables {
 
 class HomeStyles {
   TextStyle appTitleStyle =
-      const TextStyle(fontSize: 50, color: Colors.white, fontFamily: "quick");
+      const TextStyle(fontSize: 46, color: Colors.white, fontFamily: "quick");
 }
